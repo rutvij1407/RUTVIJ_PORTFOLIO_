@@ -2,7 +2,8 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaGraduationCap, FaCertificate, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaGraduationCap, FaCertificate, FaMapMarkerAlt, FaDatabase, FaRocket, FaCloud, FaUsers } from 'react-icons/fa'
+import CountUp from './CountUp'
 
 const education = [
   {
@@ -105,26 +106,96 @@ export default function Education() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
+            transition={{ duration: 0.5, delay: 0.15, ease: 'easeOut' }}
+            className="lg:col-span-2"
           >
-            <h3 className="text-xl font-semibold text-[#f5f5f7] mb-6">Certifications</h3>
-            <div className="space-y-4">
-              {certifications.map((cert, i) => (
-                <div
-                  key={i}
-                  className="p-4 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/30 transition-colors flex items-center gap-4"
+            <motion.h3
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-xl font-semibold text-[#f5f5f7] mb-8"
+            >
+              Certifications
+            </motion.h3>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+              <div className="space-y-6">
+                {certifications.map((cert, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
+                    whileHover={{ x: 6, transition: { duration: 0.2 } }}
+                    className="p-5 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/40 transition-colors flex items-center gap-4"
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={isInView ? { scale: 1 } : {}}
+                      transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.3 + i * 0.1 }}
+                      className="w-12 h-12 rounded-xl bg-[#dc2626]/10 flex items-center justify-center flex-shrink-0"
+                    >
+                      <FaCertificate className="text-[#dc2626]" size={24} />
+                    </motion.div>
+                    <div>
+                      <p className="font-semibold text-[#f5f5f7]">{cert.name}</p>
+                      <p className="text-sm text-[#9ca3af]">{cert.issuer}</p>
+                    </div>
+                  </motion.div>
+                ))}
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : {}}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  className="text-[#9ca3af] text-sm leading-relaxed"
                 >
-                  <FaCertificate className="text-[#dc2626] flex-shrink-0" size={24} />
-                  <div>
-                    <p className="font-medium text-[#f5f5f7]">{cert.name}</p>
-                    <p className="text-sm text-[#9ca3af]">{cert.issuer}</p>
-                  </div>
-                </div>
-              ))}
+                  Industry-recognized certifications strengthen my analytical and cloud computing skill set. Microsoft Power BI validates my ability to build interactive dashboards, model data efficiently, and deliver business-ready visual insights. AWS certification demonstrates foundational knowledge of cloud infrastructure, data storage, and scalable analytics solutions.
+                </motion.p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="grid grid-cols-2 gap-4"
+              >
+                {[
+                  { icon: FaDatabase, value: 100, suffix: 'K+', label: 'Records Analyzed' },
+                  { icon: FaRocket, value: 5, suffix: '+', label: 'Projects Completed' },
+                  { icon: FaCloud, value: 0, suffix: 'AWS', label: 'Cloud Certified', isText: true },
+                  { icon: FaUsers, value: 5, suffix: '', label: 'Team Members Mentored' },
+                ].map((stat, i) => {
+                  const Icon = stat.icon
+                  return (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{ duration: 0.4, delay: 0.35 + i * 0.1, type: 'spring', stiffness: 100 }}
+                      whileHover={{ scale: 1.03, y: -4 }}
+                      className="p-6 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/50 transition-colors flex flex-col items-center text-center"
+                    >
+                      <motion.div
+                        initial={{ rotate: -10, opacity: 0 }}
+                        animate={isInView ? { rotate: 0, opacity: 1 } : {}}
+                        transition={{ delay: 0.45 + i * 0.1 }}
+                        className="w-12 h-12 rounded-xl bg-[#dc2626]/10 flex items-center justify-center mb-3"
+                      >
+                        <Icon className="text-[#dc2626]" size={24} />
+                      </motion.div>
+                      <p className="text-2xl sm:text-3xl font-bold text-[#f5f5f7] mb-1">
+                        {stat.isText ? (
+                          stat.suffix
+                        ) : (
+                          <>
+                            <CountUp end={stat.value} duration={2} suffix={stat.suffix} />
+                          </>
+                        )}
+                      </p>
+                      <p className="text-[#9ca3af] text-sm">{stat.label}</p>
+                    </motion.div>
+                  )
+                })}
+              </motion.div>
             </div>
-            <p className="text-[#6b7280] text-sm mt-4">
-              Industry-recognized certifications strengthen my analytical and cloud computing skill set. Microsoft Power BI validates my ability to build interactive dashboards, model data efficiently, and deliver business-ready visual insights. AWS certification demonstrates foundational knowledge of cloud infrastructure, data storage, and scalable analytics solutions. These certifications complement my academic training by bridging theory with industry-relevant tools and platforms, reflecting my commitment to continuous learning and professional growth in data analytics and engineering.
-            </p>
           </motion.div>
         </div>
       </div>

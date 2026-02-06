@@ -3,18 +3,23 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaBolt, FaChartLine, FaCogs, FaHandshake, FaRocket, FaLightbulb } from 'react-icons/fa'
+import CountUp from './CountUp'
 
 const items = [
   {
     icon: FaBolt,
     title: 'Automation First',
-    desc: 'Cut manual effort by 35% with Excel, Power BI, and Python pipelines. Focus on impact, not repetitive tasks.',
+    descBefore: 'Cut manual effort by ',
+    countUp: { end: 35, suffix: '%' },
+    descAfter: ' with Excel, Power BI, and Python pipelines. Focus on impact, not repetitive tasks.',
     size: 'large',
   },
   {
     icon: FaChartLine,
     title: 'Data to Decisions',
-    desc: '100K+ records analyzed. SQL, Power BI, and Tableau for clear insights stakeholders can act on.',
+    descBefore: '',
+    countUp: { end: 100, suffix: 'K+' },
+    descAfter: ' records analyzed. SQL, Power BI, and Tableau for clear insights stakeholders can act on.',
     size: 'medium',
   },
   {
@@ -26,7 +31,9 @@ const items = [
   {
     icon: FaHandshake,
     title: 'Mentorship & Playbooks',
-    desc: '20% better data accuracy through mentoring. Self-service analytics playbooks for teams.',
+    descBefore: '',
+    countUp: { end: 20, suffix: '%' },
+    descAfter: ' better data accuracy through mentoring. Self-service analytics playbooks for teams.',
     size: 'large',
   },
   {
@@ -112,7 +119,15 @@ export default function KeyDifferentiators() {
                     {item.title}
                   </h3>
                   <p className="text-[#9ca3af] text-sm sm:text-base leading-relaxed flex-1">
-                    {item.desc}
+                    {item.desc ? (
+                      item.desc
+                    ) : (
+                      <>
+                        {item.descBefore}
+                        <CountUp end={item.countUp!.end} duration={2} suffix={item.countUp!.suffix} />
+                        {item.descAfter}
+                      </>
+                    )}
                   </p>
                 </div>
               </motion.article>

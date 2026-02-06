@@ -1,18 +1,19 @@
 'use client'
 
 import { motion, useInView } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { FaCode, FaCloud, FaDatabase, FaRocket, FaChartBar, FaUsers } from 'react-icons/fa'
+import CountUp from './CountUp'
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   const stats = [
-    { label: 'Records Analyzed', value: '100K+', icon: FaDatabase, color: '#dc2626' },
-    { label: 'Projects Completed', value: '5+', icon: FaRocket, color: '#ef4444' },
-    { label: 'Cloud Certified', value: 'AWS', icon: FaCloud, color: '#f59e0b' },
-    { label: 'Team Members Mentored', value: '5', icon: FaUsers, color: '#22c55e' },
+    { label: 'Records Analyzed', value: 100, suffix: 'K+', icon: FaDatabase },
+    { label: 'Projects Completed', value: 5, suffix: '+', icon: FaRocket },
+    { label: 'Cloud Certified', value: 0, suffix: 'AWS', icon: FaCloud, isText: true },
+    { label: 'Team Members Mentored', value: 5, suffix: '', icon: FaUsers },
   ]
 
   const services = [
@@ -23,10 +24,10 @@ export default function About() {
   ]
 
   const highlights = [
-    'Automated recurring reports with Excel/Power BI, cutting manual effort by 35%',
-    'Mentored team members on data quality standards, improving data accuracy by 20%',
-    'Built ETL pipelines and real-time dashboards on AWS RDS for KPIs and engagement',
-    'Analyzed 100K+ records to uncover sales and performance trends with SQL and Power BI',
+    { before: 'Automated recurring reports with Excel/Power BI, cutting manual effort by ', countUp: { end: 35, suffix: '%' }, after: '' },
+    { before: 'Mentored team members on data quality standards, improving data accuracy by ', countUp: { end: 20, suffix: '%' }, after: '' },
+    { before: 'Built ETL pipelines and real-time dashboards on AWS RDS for KPIs and engagement', countUp: null },
+    { before: 'Analyzed ', countUp: { end: 100, suffix: 'K+' }, after: ' records to uncover sales and performance trends with SQL and Power BI' },
   ]
 
   return (
@@ -55,11 +56,11 @@ export default function About() {
           <p className="text-[#d1d5db] text-lg leading-relaxed max-w-4xl mx-auto text-center">
             I am a graduate student in Data Analytics Engineering at George Mason University with over two years 
             of hands-on experience building data solutions that drive measurable business outcomes. At Archents India, 
-            I analyzed 100K+ records using SQL and Power BI to uncover sales trends, and automated recurring reports 
-            to cut manual effort by 35%. As Founder & Data Lead at Pullulate, I designed real-time dashboards on AWS RDS, 
-            built ETL pipelines with Python and SQL, and mentored team members—improving data accuracy by 20%. 
+            I analyzed <CountUp end={100} suffix="K+" duration={2} className="text-[#dc2626] font-semibold" /> records using SQL and Power BI to uncover sales trends, and automated recurring reports 
+            to cut manual effort by <CountUp end={35} suffix="%" duration={2} className="text-[#dc2626] font-semibold" />. As Founder & Data Lead at Pullulate, I designed real-time dashboards on AWS RDS, 
+            built ETL pipelines with Python and SQL, and mentored team members, improving data accuracy by <CountUp end={20} suffix="%" duration={2} className="text-[#dc2626] font-semibold" />. 
             I combine technical depth in Python, SQL, and cloud platforms with a knack for translating complex data 
-            into clear, actionable insights for stakeholders. I am actively seeking Summer 2026 internship opportunities 
+            into clear, actionable insights for stakeholders. I am actively seeking Summer <CountUp end={2026} duration={2} className="text-[#dc2626] font-semibold" /> internship opportunities 
             in Data Analytics and Data Engineering.
           </p>
         </motion.div>
@@ -79,7 +80,9 @@ export default function About() {
                 className="p-6 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/50 transition-colors"
               >
                 <Icon className="text-[#dc2626] mb-3" size={28} />
-                <p className="text-2xl font-bold text-[#f5f5f7]">{stat.value}</p>
+                <p className="text-2xl font-bold text-[#f5f5f7]">
+                  {stat.isText ? stat.suffix : <CountUp end={stat.value} duration={2} suffix={stat.suffix} />}
+                </p>
                 <p className="text-[#9ca3af] text-sm">{stat.label}</p>
               </motion.div>
             )
@@ -122,7 +125,15 @@ export default function About() {
               key={index}
               className="px-4 py-2 rounded-lg bg-[#dc2626]/10 border border-[#dc2626]/30 text-[#dc2626] text-sm"
             >
-              ▹ {highlight}
+              ▹ {highlight.countUp ? (
+                <>
+                  {highlight.before}
+                  <CountUp end={highlight.countUp.end} suffix={highlight.countUp.suffix} duration={2} className="font-semibold" />
+                  {highlight.after}
+                </>
+              ) : (
+                highlight.before
+              )}
             </span>
           ))}
         </motion.div>

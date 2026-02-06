@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Portfolio of Rutvij Reddy Vakati - Data Analytics Engineer, MS Data Analytics @ GMU, transforming raw data into actionable insights',
   keywords: 'Data Analytics, Data Engineering, Power BI, Python, SQL, AWS, Portfolio',
   icons: {
-    icon: '/assets/img/VRR.png',
+    icon: '/assets/img/RV.svg',
   },
 }
 

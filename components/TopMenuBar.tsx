@@ -43,7 +43,7 @@ export default function TopMenuBar() {
           </div>
 
           <a href="#home" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 group">
-            <span className="text-xl md:text-2xl font-bold text-[#dc2626]">RV</span>
+            <span className="text-xl md:text-2xl font-bold tracking-tight text-[#dc2626]" aria-hidden="true">RV</span>
             <span className="hidden sm:inline text-lg font-semibold text-white group-hover:text-[#dc2626] transition-colors">
               Rutvij Vakati
             </span>

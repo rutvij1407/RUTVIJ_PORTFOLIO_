@@ -93,7 +93,7 @@ export default function Projects() {
             Featured <span className="text-[#dc2626]">Projects</span>
           </h2>
           <p className="text-[#9ca3af] max-w-2xl mx-auto">
-            Academic and personal projects—machine learning, automation, visualization, and full-stack development
+            Academic and personal projects: machine learning, automation, visualization, and full-stack development
           </p>
         </motion.div>
 

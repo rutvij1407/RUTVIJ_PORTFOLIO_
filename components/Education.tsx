@@ -61,7 +61,7 @@ export default function Education() {
             className="lg:col-span-2 mb-8"
           >
             <p className="text-[#d1d5db] leading-relaxed max-w-4xl mx-auto text-center">
-              I am pursuing a Master of Science in Data Analytics Engineering at George Mason University, building a strong foundation in statistics, machine learning, big data analytics, and data visualization. My coursework emphasizes both theoretical understanding and practical implementation using real-world datasets. Through academic projects, I have gained experience in end-to-end analytics workflows—from data collection and preprocessing to modeling and presentation. The program has strengthened my ability to think critically about data and communicate insights effectively. I am actively applying these skills to projects, research, and professional opportunities.
+              I am pursuing a Master of Science in Data Analytics Engineering at George Mason University, building a strong foundation in statistics, machine learning, big data analytics, and data visualization. My coursework emphasizes both theoretical understanding and practical implementation using real-world datasets. Through academic projects, I have gained experience in end-to-end analytics workflows, from data collection and preprocessing to modeling and presentation. The program has strengthened my ability to think critically about data and communicate insights effectively. I am actively applying these skills to projects, research, and professional opportunities.
             </p>
           </motion.div>
           {education.map((edu, index) => (

@@ -26,7 +26,7 @@ const projects = [
     description: 'Designed an NFT analytics dashboard using Python and Power BI to visualize NFT sales, trends, and ownership patterns. Integrated blockchain APIs to collect and analyze real-time NFT metadata and transaction statistics.',
     skills: ['skills-html.svg', 'skills-css.svg', 'skills-javascript.svg'],
     link: 'https://rutvij1407.github.io/NFTGENIX/',
-    github: 'https://github.com/rutvij1167/NFTGENIX',
+    github: 'https://github.com/rutvij1407/NFTGENIX',
     image: 'projects-3.jpg',
   },
   {

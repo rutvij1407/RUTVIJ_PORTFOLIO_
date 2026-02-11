@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaCertificate, FaPython, FaDatabase, FaChartBar, FaAws, FaMicrosoft } from 'react-icons/fa'
+import { FaCertificate, FaPython, FaDatabase } from 'react-icons/fa'
 import CountUp from './CountUp'
 
 const certifications = [
@@ -34,26 +34,12 @@ const certifications = [
     date: 'Feb 2026',
     description: 'Fundamental SQL operations including queries, relationships, and aggregators.',
   },
-  {
-    name: 'Microsoft Power BI',
-    issuer: 'Microsoft',
-    icon: FaMicrosoft,
-    date: '2024',
-    description: 'Build interactive dashboards, model data efficiently, and deliver business-ready visual insights.',
-  },
-  {
-    name: 'AWS Cloud Practitioner',
-    issuer: 'Amazon Web Services',
-    icon: FaAws,
-    date: '2024',
-    description: 'Foundational knowledge of cloud infrastructure, data storage, and scalable analytics solutions.',
-  },
 ]
 
 const stats = [
-  { value: 6, suffix: '+', label: 'Certifications' },
-  { value: 3, suffix: '', label: 'Platforms' },
-  { value: 4, suffix: '', label: 'SQL Levels' },
+  { value: 4, suffix: '', label: 'Certifications' },
+  { value: 1, suffix: '', label: 'Platform' },
+  { value: 3, suffix: '', label: 'SQL Levels' },
   { value: 100, suffix: '%', label: 'Verified' },
 ]
 
@@ -75,7 +61,7 @@ export default function Certifications() {
             Professional <span className="text-[#dc2626]">Certifications</span>
           </h2>
           <p className="text-[#9ca3af] max-w-2xl mx-auto">
-            Industry-recognized credentials validating expertise in programming, databases, cloud computing, and data visualization
+            HackerRank credentials validating expertise in Python programming and SQL database operations
           </p>
         </motion.div>
 

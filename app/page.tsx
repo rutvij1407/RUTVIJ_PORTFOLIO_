@@ -13,6 +13,7 @@ import Projects from '@/components/Projects'
 import KeyDifferentiators from '@/components/KeyDifferentiators'
 import Skills from '@/components/Skills'
 import Education from '@/components/Education'
+import Certifications from '@/components/Certifications'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import ScrollUp from '@/components/ScrollUp'
@@ -45,6 +46,7 @@ export default function Page() {
             <Projects />
             <Skills />
             <Education />
+            <Certifications />
             <Contact />
             <Footer />
             <ScrollUp />

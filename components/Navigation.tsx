@@ -66,7 +66,7 @@ export default function Navigation() {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/vakati-rutvij-reddy"
+              href="https://linkedin.com/in/vakati-rutvij-1167rutvij"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#9ca3af] hover:text-[#3b82f6] transition-colors p-2"
@@ -115,7 +115,7 @@ export default function Navigation() {
                 <a href="https://github.com/rutvij1407" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6]">
                   <FaGithub size={24} />
                 </a>
-                <a href="https://linkedin.com/in/vakati-rutvij-reddy" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6]">
+                <a href="https://linkedin.com/in/vakati-rutvij-1167rutvij" target="_blank" rel="noopener noreferrer" className="text-[#3b82f6]">
                   <FaLinkedin size={24} />
                 </a>
                 <a href="mailto:rvakati@gmu.edu" className="text-[#3b82f6]">

@@ -2,7 +2,7 @@
 
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { FaGraduationCap, FaCertificate, FaMapMarkerAlt, FaDatabase, FaRocket, FaCloud, FaUsers } from 'react-icons/fa'
+import { FaGraduationCap, FaCertificate, FaMapMarkerAlt, FaDatabase, FaRocket, FaUsers } from 'react-icons/fa'
 import CountUp from './CountUp'
 
 const education = [
@@ -29,6 +29,10 @@ const education = [
 const certifications = [
   { name: 'Microsoft Power BI Certification', issuer: 'Microsoft' },
   { name: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services' },
+  { name: 'Python Skill Certificate', issuer: 'HackerRank' },
+  { name: 'SQL (Advanced) Skill Certificate', issuer: 'HackerRank' },
+  { name: 'SQL (Intermediate) Skill Certificate', issuer: 'HackerRank' },
+  { name: 'SQL (Basic) Skill Certificate', issuer: 'HackerRank' },
 ]
 
 export default function Education() {
@@ -119,36 +123,38 @@ export default function Education() {
             </motion.h3>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
               <div className="space-y-6">
-                {certifications.map((cert, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.25 + i * 0.1 }}
-                    whileHover={{ x: 6, transition: { duration: 0.2 } }}
-                    className="p-5 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/40 transition-colors flex items-center gap-4"
-                  >
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {certifications.map((cert, i) => (
                     <motion.div
-                      initial={{ scale: 0 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.3 + i * 0.1 }}
-                      className="w-12 h-12 rounded-xl bg-[#dc2626]/10 flex items-center justify-center flex-shrink-0"
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.5, delay: 0.25 + i * 0.05 }}
+                      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+                      className="p-4 rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/40 transition-colors flex items-center gap-3"
                     >
-                      <FaCertificate className="text-[#dc2626]" size={24} />
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={isInView ? { scale: 1 } : {}}
+                        transition={{ type: 'spring', stiffness: 200, damping: 15, delay: 0.3 + i * 0.05 }}
+                        className="w-10 h-10 rounded-lg bg-[#dc2626]/10 flex items-center justify-center flex-shrink-0"
+                      >
+                        <FaCertificate className="text-[#dc2626]" size={20} />
+                      </motion.div>
+                      <div>
+                        <p className="font-semibold text-[#f5f5f7] text-sm">{cert.name}</p>
+                        <p className="text-xs text-[#9ca3af]">{cert.issuer}</p>
+                      </div>
                     </motion.div>
-                    <div>
-                      <p className="font-semibold text-[#f5f5f7]">{cert.name}</p>
-                      <p className="text-sm text-[#9ca3af]">{cert.issuer}</p>
-                    </div>
-                  </motion.div>
-                ))}
+                  ))}
+                </div>
                 <motion.p
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   className="text-[#9ca3af] text-sm leading-relaxed"
                 >
-                  Industry-recognized certifications strengthen my analytical and cloud computing skill set. Microsoft Power BI validates my ability to build interactive dashboards, model data efficiently, and deliver business-ready visual insights. AWS certification demonstrates foundational knowledge of cloud infrastructure, data storage, and scalable analytics solutions.
+                  Industry-recognized certifications validate my technical proficiency across data analytics, cloud computing, and programming. HackerRank certifications demonstrate expertise in Python and SQL from basic to advanced levels. Microsoft Power BI validates my ability to build interactive dashboards, while AWS certification shows foundational cloud infrastructure knowledge.
                 </motion.p>
               </div>
               <motion.div
@@ -160,7 +166,7 @@ export default function Education() {
                 {[
                   { icon: FaDatabase, value: 100, suffix: 'K+', label: 'Records Analyzed' },
                   { icon: FaRocket, value: 5, suffix: '+', label: 'Projects Completed' },
-                  { icon: FaCloud, value: 0, suffix: 'AWS', label: 'Cloud Certified', isText: true },
+                  { icon: FaCertificate, value: 6, suffix: '+', label: 'Certifications Earned' },
                   { icon: FaUsers, value: 5, suffix: '', label: 'Team Members Mentored' },
                 ].map((stat, i) => {
                   const Icon = stat.icon
@@ -182,13 +188,7 @@ export default function Education() {
                         <Icon className="text-[#dc2626]" size={24} />
                       </motion.div>
                       <p className="text-2xl sm:text-3xl font-bold text-[#f5f5f7] mb-1">
-                        {stat.isText ? (
-                          stat.suffix
-                        ) : (
-                          <>
-                            <CountUp end={stat.value} duration={2} suffix={stat.suffix} />
-                          </>
-                        )}
+                        <CountUp end={stat.value} duration={2} suffix={stat.suffix} />
                       </p>
                       <p className="text-[#9ca3af] text-sm">{stat.label}</p>
                     </motion.div>

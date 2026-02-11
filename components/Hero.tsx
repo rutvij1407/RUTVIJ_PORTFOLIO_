@@ -15,7 +15,7 @@ const config = {
   contact: {
     email: "rvakati@gmu.edu",
     phone: "+1 (703) 499-1275",
-    linkedin: "linkedin.com/in/vakati-rutvij-reddy",
+    linkedin: "linkedin.com/in/vakati-rutvij-1167rutvij",
     github: "github.com/rutvij1407",
   },
   expertise: [

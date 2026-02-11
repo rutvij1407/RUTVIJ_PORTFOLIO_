@@ -20,8 +20,8 @@ const contactInfo = [
   {
     icon: FaLinkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/vakati-rutvij-reddy',
-    link: 'https://www.linkedin.com/in/vakati-rutvij-reddy',
+    value: 'linkedin.com/in/vakati-rutvij-1167rutvij',
+    link: 'https://www.linkedin.com/in/vakati-rutvij-1167rutvij',
   },
   {
     icon: FaGithub,

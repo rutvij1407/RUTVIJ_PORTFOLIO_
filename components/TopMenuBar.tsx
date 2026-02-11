@@ -19,7 +19,7 @@ export default function TopMenuBar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/vakati-rutvij-reddy"
+              href="https://www.linkedin.com/in/vakati-rutvij-1167rutvij"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg text-[#9ca3af] hover:text-[#dc2626] hover:bg-[#dc2626]/10 transition-colors"

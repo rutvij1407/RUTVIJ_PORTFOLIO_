@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaCertificate, FaPython, FaDatabase } from 'react-icons/fa'
-import CountUp from './CountUp'
+import CountUp from '@/components/ui/CountUp'
 
 const certifications = [
   {

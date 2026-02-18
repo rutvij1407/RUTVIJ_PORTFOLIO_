@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaBolt, FaChartLine, FaCogs, FaHandshake, FaRocket, FaLightbulb } from 'react-icons/fa'
-import CountUp from './CountUp'
+import CountUp from '@/components/ui/CountUp'
 
 const items = [
   {

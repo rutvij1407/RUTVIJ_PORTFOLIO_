@@ -3,7 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { FaCode, FaCloud, FaDatabase, FaRocket, FaChartBar, FaUsers } from 'react-icons/fa'
-import CountUp from './CountUp'
+import CountUp from '@/components/ui/CountUp'
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null)

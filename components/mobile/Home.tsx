@@ -27,7 +27,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#3b82f6]/20 via-[#3b82f6]/5 to-transparent rounded-3xl" />
           <div className="absolute inset-0 flex items-end justify-center pb-4">
             <Image
-              src="/assets/img/rutvij-new.png"
+              src="/assets/img/rutvij-cutout.png"
               alt="Rutvij Reddy Vakati"
               width={250}
               height={300}
@@ -62,7 +62,7 @@ export default function Home() {
           </div>
           <div className="bg-gradient-to-b from-[#3b82f6]/20 to-transparent h-44 rounded-2xl flex items-end justify-center overflow-hidden mb-6">
             <Image
-              src="/assets/img/rutvij-new.png"
+              src="/assets/img/rutvij-cutout.png"
               alt="Rutvij"
               width={140}
               height={180}
@@ -106,7 +106,7 @@ export default function Home() {
           </div>
           <div className="bg-gradient-to-b from-[#3b82f6]/20 to-transparent h-44 rounded-2xl flex items-end justify-center overflow-hidden mb-6">
             <Image
-              src="/assets/img/rutvij-new.png"
+              src="/assets/img/rutvij-cutout.png"
               alt="Rutvij"
               width={180}
               height={210}

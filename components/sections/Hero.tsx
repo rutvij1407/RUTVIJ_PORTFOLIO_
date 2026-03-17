@@ -160,7 +160,7 @@ export default function Hero() {
                 transition={{ duration: 0.35, ease: 'easeInOut' }}
               >
                 <Image
-                  src="/assets/img/rutvij-new.png"
+                  src="/assets/img/rutvij-cutout.png"
                   alt="Rutvij Reddy Vakati"
                   fill
                   className="object-contain"
@@ -199,7 +199,7 @@ export default function Hero() {
               <div className="relative rounded-2xl overflow-hidden border-2 border-[#dc2626]/30 aspect-[3/4]">
                 <div className="absolute -inset-1 bg-gradient-to-br from-[#dc2626] to-[#b91c1c] rounded-2xl blur opacity-30" />
                 <Image
-                  src="/assets/img/rutvij-new.png"
+                  src="/assets/img/rutvij-cutout.png"
                   alt="Rutvij Reddy Vakati"
                   fill
                   className="object-contain"

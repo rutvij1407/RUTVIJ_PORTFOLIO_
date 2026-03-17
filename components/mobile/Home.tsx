@@ -27,11 +27,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#3b82f6]/20 via-[#3b82f6]/5 to-transparent rounded-3xl" />
           <div className="absolute inset-0 flex items-end justify-center pb-4">
             <Image
-              src="/assets/img/rutvij-cutout.png"
+              src="/assets/img/rutvij-bg.png"
               alt="Rutvij Reddy Vakati"
               width={250}
               height={300}
-              className="w-[230px] md:w-[450px] max-w-full object-contain object-bottom"
+              className="w-[230px] md:w-[450px] max-w-full object-cover object-bottom"
             />
           </div>
           <div className="relative z-10 mt-auto bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/20">
@@ -62,11 +62,11 @@ export default function Home() {
           </div>
           <div className="bg-gradient-to-b from-[#3b82f6]/20 to-transparent h-44 rounded-2xl flex items-end justify-center overflow-hidden mb-6">
             <Image
-              src="/assets/img/rutvij-cutout.png"
+              src="/assets/img/rutvij-bg.png"
               alt="Rutvij"
               width={140}
               height={180}
-              className="w-[120px] md:w-[140px] object-contain object-bottom"
+              className="w-[120px] md:w-[140px] object-cover object-bottom"
             />
           </div>
           <p className="text-sm text-[#9ca3af] mb-6">
@@ -106,11 +106,11 @@ export default function Home() {
           </div>
           <div className="bg-gradient-to-b from-[#3b82f6]/20 to-transparent h-44 rounded-2xl flex items-end justify-center overflow-hidden mb-6">
             <Image
-              src="/assets/img/rutvij-cutout.png"
+              src="/assets/img/rutvij-bg.png"
               alt="Rutvij"
               width={180}
               height={210}
-              className="w-[180px] md:w-[210px] object-contain object-bottom -translate-y-4"
+              className="w-[180px] md:w-[210px] object-cover object-bottom -translate-y-4"
             />
           </div>
           <p className="text-sm text-[#9ca3af] mb-6">

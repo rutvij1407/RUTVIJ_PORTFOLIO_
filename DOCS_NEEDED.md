@@ -7,7 +7,7 @@ To ensure your portfolio has complete, accurate content that aligns with your re
 ## Required (Already Used)
 
 - **Resume PDF** – Already integrated; ensure `public/assets/pdf/Rutvij_Resume.pdf` is up to date.
-- **LinkedIn** – https://www.linkedin.com/in/vakati-rutvij-reddy
+- **LinkedIn** – https://www.linkedin.com/in/vakati-rutvij-1167rutvij
 - **GitHub** – https://github.com/rutvij1407
 - **Email** – rvakati@gmu.edu
 - **Phone** – +1 (703) 499-1275
@@ -52,7 +52,7 @@ To ensure your portfolio has complete, accurate content that aligns with your re
 | Link | Current Value | Status |
 |------|---------------|--------|
 | Resume Download | `/assets/pdf/Rutvij_Resume.pdf` | ✅ |
-| LinkedIn | https://www.linkedin.com/in/vakati-rutvij-reddy | ✅ |
+| LinkedIn | https://www.linkedin.com/in/vakati-rutvij-1167rutvij | ✅ |
 | GitHub | https://github.com/rutvij1407 | ✅ |
 | IBM HR Output | https://rutvij1407.github.io/rtuvij1407.github.io-output/ | Verify |
 | GitHub Pages Repo | https://github.com/rutvij1407/rtuvij1407.github.io-output | Verify |

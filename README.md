@@ -121,7 +121,7 @@ git push -u origin main --force
 
 - **Email:** rvakati@gmu.edu
 - **Phone:** +1 (703) 499-1275
-- **LinkedIn:** [vakati-rutvij-reddy](https://linkedin.com/in/vakati-rutvij-reddy)
+- **LinkedIn:** [vakati-rutvij-1167rutvij](https://linkedin.com/in/vakati-rutvij-1167rutvij)
 - **GitHub:** [rutvij1407](https://github.com/rutvij1407)
 - **Location:** Fairfax, VA, USA
 

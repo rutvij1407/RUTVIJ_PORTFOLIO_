@@ -1,5 +1,7 @@
 # Rutvij Reddy Vakati | Data Analytics Engineer Portfolio
 
+Live site: https://rutvij-portfolio-six.vercel.app
+
 A modern, responsive portfolio website built with Next.js 14, TypeScript, Framer Motion, and Tailwind CSS.
 
 ## Features

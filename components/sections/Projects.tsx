@@ -10,59 +10,60 @@ type Project = {
   description: string
   highlights: string[]
   tech: string[]
-  link: string | null
+  link: string
   github: string
-  image?: string
+  images: [string, string]
   category: 'Apps' | 'Analytics' | 'Course'
 }
 
 const projects: Project[] = [
   {
     title: 'TalentScope',
+    images: ['/assets/img/projects/talentscope-1.jpg', '/assets/img/projects/talentscope-2.jpg'],
     subtitle: 'Job market intelligence | React, Vite, MapLibre',
     description: 'Interactive dashboard built from 206,292 real US data job postings from 2023: skills in demand, salaries, hiring cities, and a state map you can filter by role. It also includes a resume skill check for international students.',
     highlights: ['State map with postings and salary views, role filter and city hotspots', 'Salary estimator from role, seniority and city medians', 'Resume skill check against the skills real postings ask for'],
     tech: ['React', 'Recharts', 'MapLibre', 'Python', 'pandas'],
     link: 'https://talentscope-chi.vercel.app',
     github: 'https://github.com/rutvij1407/Talentscope',
-    image: '/assets/img/projects/talentscope.jpg',
     category: 'Apps',
   },
   {
     title: 'CapitalEdge',
+    images: ['/assets/img/projects/capitaledge-1.jpg', '/assets/img/projects/capitaledge-2.jpg'],
     subtitle: 'DMV housing analytics | Python, Dash, scikit-learn',
     description: 'Dashboard for the Washington DC metro housing market that combines home values, income and crime across 191 ZIP codes, with findings stated plainly in the README.',
     highlights: ['191 ZIP codes with price to income affordability', 'Model results reported honestly, including limits', 'Deployed on Vercel from the repo'],
     tech: ['Python', 'Dash', 'Plotly', 'scikit-learn'],
     link: 'https://capitaledge-one.vercel.app',
     github: 'https://github.com/rutvij1407/CapitalEdge',
-    image: '/assets/img/projects/capitaledge.jpg',
     category: 'Apps',
   },
   {
     title: 'DataSense',
+    images: ['/assets/img/projects/datasense-1.jpg', '/assets/img/projects/datasense-2.jpg'],
     subtitle: 'Natural language analytics | Next.js, Claude API',
     description: 'Chat with a dataset in plain English and get charts and summaries back. The public site runs a recorded demo so it costs nothing and never calls a live model; the code supports live AI with your own key.',
     highlights: ['Recorded demo with charts, no API key needed', 'Server side switch that blocks live AI in the public deployment', 'Plotly style charts from structured answers'],
     tech: ['Next.js', 'TypeScript', 'Claude API', 'Recharts'],
     link: 'https://data-sense-chatbot.vercel.app',
     github: 'https://github.com/rutvij1407/Data_Sense_AI_Chatbot',
-    image: '/assets/img/projects/datasense.jpg',
     category: 'Apps',
   },
   {
     title: 'Solaris',
+    images: ['/assets/img/projects/solaris-1.jpg', '/assets/img/projects/solaris-2.jpg'],
     subtitle: 'Live globe | Next.js, MapLibre, open flight data',
     description: 'A 3D globe with live aircraft from open ADS-B feeds and place search, plus a native macOS companion app written in Swift. The web version needs no API keys.',
     highlights: ['Live aircraft positions from OpenSky and adsb.lol', 'Satellite imagery globe with place search', 'Native SwiftUI macOS app in a separate repo'],
     tech: ['Next.js', 'MapLibre GL', 'Swift', 'SwiftUI'],
     link: 'https://solaris-web-ten.vercel.app',
     github: 'https://github.com/rutvij1407/Solaris',
-    image: '/assets/img/projects/solaris.jpg',
     category: 'Apps',
   },
   {
     title: 'Pulse',
+    images: ['/assets/img/projects/pulse-1.jpg', '/assets/img/projects/pulse-2.jpg'],
     subtitle: 'Streaming music analytics | Python, NLP, Tableau',
     description: 'Data pipeline that pulls Spotify and YouTube data, runs sentiment analysis on listener comments, and surfaces trends through dashboards.',
     highlights: ['Spotify and YouTube ETL pipeline', 'VADER and TextBlob sentiment analysis', 'Interactive dashboards'],
@@ -73,6 +74,7 @@ const projects: Project[] = [
   },
   {
     title: 'IBM HR Employee Attrition',
+    images: ['/assets/img/projects/hr-1.jpg', '/assets/img/projects/hr-2.jpg'],
     subtitle: 'STAT 515 final project | R, machine learning',
     description: 'Predicting employee attrition on the IBM HR dataset with logistic regression, LASSO, decision trees and random forests, reported in a Quarto site with 17 figures.',
     highlights: ['LASSO performed best (AUC 0.803) against random forest (0.672)', 'Feature engineering, ROC curves, cross validation', 'Business interpretation of each model'],
@@ -83,24 +85,35 @@ const projects: Project[] = [
   },
   {
     title: 'Redesigning EU Unemployment Charts',
+    images: ['/assets/img/projects/stat515-1.jpg', '/assets/img/projects/stat515-2.jpg'],
     subtitle: 'STAT 515 midterm | R, ggplot2',
     description: 'A critique of an Eurostat unemployment chart and two redesigns that put comparison first: a ranked country bar chart and long term small multiples.',
     highlights: ['Original chart critique', 'Ranked bar chart for 2024', 'Small multiples for long term unemployment'],
     tech: ['R', 'ggplot2', 'Data visualization'],
     link: 'https://rutvij1407.github.io/Mid_STAT-515_Visualizations-project-output/',
     github: 'https://github.com/rutvij1407/Mid_STAT-515_Visualizations-project-output',
-    image: '/assets/img/projects/stat515-visualizations.jpg',
     category: 'Course',
   },
   {
     title: 'Healthcare Claims in SQL',
+    images: ['/assets/img/projects/hi671-1.jpg', '/assets/img/projects/hi671-2.jpg'],
     subtitle: 'HI 671 Query 2 | SQL, DuckDB',
     description: 'Maps ICD9 codes to clinical categories, builds a diabetes cohort, and answers questions on cost, gender and data quality. Results are shown for a synthetic dataset, so no patient data is exposed.',
     highlights: ['ICD9 to CCS mapping and cohort exclusion', 'Average cost per diagnosis and prevalence by gender', 'Audit that finds seven planted code errors'],
     tech: ['SQL', 'DuckDB', 'Python'],
     link: 'https://hi671-query-results.vercel.app',
     github: 'https://github.com/rutvij1407/hi-671',
-    image: '/assets/img/projects/hi671.jpg',
+    category: 'Course',
+  },
+  {
+    title: 'Flight Delay Prediction',
+    images: ['/assets/img/projects/flightdelay-1.jpg', '/assets/img/projects/flightdelay-2.jpg'],
+    subtitle: 'AIT 614 team project | PySpark, Spark MLlib',
+    description: 'Delay and cancellation models trained on 538K US flights, with a dashboard that presents the results. Built as a team project for a big data course.',
+    highlights: ['Spark pipeline over 538K flights', 'Delay and cancellation prediction models', 'Results dashboard on Vercel'],
+    tech: ['PySpark', 'Spark MLlib', 'Python'],
+    link: 'https://ait614-flight-delay-dashboard.vercel.app',
+    github: 'https://github.com/rutvij1407/AIT-614-final-project',
     category: 'Course',
   },
 ]
@@ -150,7 +163,7 @@ export default function Projects() {
             Featured <span className="text-[#dc2626]">Projects</span>
           </h2>
           <p className="text-[#9ca3af] max-w-2xl mx-auto">
-            Live apps and analysis projects. Every card with a Live demo button opens a working site.
+            Live apps and analysis projects. Every project has two screenshots, a link to the live website and a link to the code.
           </p>
         </motion.div>
 
@@ -187,16 +200,14 @@ export default function Projects() {
               }}
               className="group rounded-xl bg-[#0a0a0a] border border-[#1f2937] hover:border-[#dc2626]/40 transition-all duration-300 overflow-hidden flex flex-col"
             >
-              {project.image ? (
-                <a href={project.link ?? project.github} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title}`} className="block aspect-[16/9] overflow-hidden border-b border-[#1f2937] bg-[#111]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={project.image} alt={`${project.title} preview`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]" />
-                </a>
-              ) : (
-                <div className="aspect-[16/9] border-b border-[#1f2937] bg-gradient-to-br from-[#dc2626]/15 to-[#0a0a0a] flex items-center justify-center">
-                  <FaFolderOpen className="text-[#dc2626]" size={34} />
-                </div>
-              )}
+              <div className="grid grid-cols-2 border-b border-[#1f2937] bg-[#111]">
+                {project.images.map((src, i) => (
+                  <a key={src} href={project.link} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} website`} className={`block aspect-[4/3] overflow-hidden ${i === 0 ? 'border-r border-[#1f2937]' : ''}`}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={src} alt={`${project.title} screenshot ${i + 1}`} loading="lazy" className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]" />
+                  </a>
+                ))}
+              </div>
               <div className="p-6 flex flex-col flex-1">
               <h3 className="text-lg font-semibold text-[#f5f5f7] mb-1 group-hover:text-[#dc2626] transition-colors">{project.title}</h3>
               <p className="text-sm text-[#dc2626] mb-3">{project.subtitle}</p>
@@ -222,13 +233,12 @@ export default function Projects() {
                 ))}
               </div>
               <div className="mt-auto flex gap-3 pt-1">
-                {project.link && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-[#dc2626] hover:bg-[#b91c1c] text-white text-sm font-medium transition-colors">
-                    Live demo
+                                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-[#dc2626] hover:bg-[#b91c1c] text-white text-sm font-medium transition-colors">
+                    Website
                   </a>
-                )}
+
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg border border-[#1f2937] hover:border-[#dc2626]/50 text-[#d1d5db] text-sm transition-colors">
-                  Code
+                  GitHub
                 </a>
               </div>
               </div>

@@ -11,7 +11,7 @@ const config = {
   role: "Data Analytics Engineer",
   education: "MS Data Analytics @ GMU",
   location: "Fairfax, VA",
-  status: "Open to Summer 2026 Internships",
+  status: "Open to Data Analytics and Engineering roles",
   contact: {
     email: "rvakati@gmu.edu",
     phone: "+1 (703) 499-1275",
@@ -45,16 +45,16 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#b91c1c]/10 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+      <div className="relative z-10 w-full min-w-0 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-w-0">
+          <div className="space-y-6 min-w-0">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="flex flex-col lg:flex-row items-center gap-8"
             >
-              <div className="text-center lg:text-left space-y-4 flex-1">
+              <div className="text-center lg:text-left space-y-4 flex-1 min-w-0 w-full">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.15 }}
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
+                  className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight break-words"
                 >
                   Transforming{' '}
                   <span className="text-[#dc2626]">raw data</span>
@@ -130,7 +130,7 @@ export default function Hero() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
-                  className="flex items-center gap-6 text-sm text-[#9ca3af] justify-center lg:justify-start"
+                  className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-[#9ca3af] justify-center lg:justify-start"
                 >
                   <span className="flex items-center gap-2">
                     <FaMapMarkerAlt className="text-[#dc2626]" />
@@ -138,7 +138,7 @@ export default function Hero() {
                   </span>
                   <span className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#22c55e] animate-pulse" />
-                    Open to Summer 2026 Internships
+                    Open to Data Analytics and Engineering roles
                   </span>
                 </motion.div>
               </div>

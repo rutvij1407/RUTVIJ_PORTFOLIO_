@@ -60,8 +60,7 @@ export default function About() {
             to cut manual effort by <CountUp end={35} suffix="%" duration={2} className="text-[#dc2626] font-semibold" />. As Founder & Data Lead at Pullulate, I designed real-time dashboards on AWS RDS, 
             built ETL pipelines with Python and SQL, and mentored team members, improving data accuracy by <CountUp end={20} suffix="%" duration={2} className="text-[#dc2626] font-semibold" />. 
             I combine technical depth in Python, SQL, and cloud platforms with a knack for translating complex data 
-            into clear, actionable insights for stakeholders. I am actively seeking Summer <CountUp end={2026} duration={2} className="text-[#dc2626] font-semibold" /> internship opportunities 
-            in Data Analytics and Data Engineering.
+            into clear, actionable insights for stakeholders. I am open to data analytics and data engineering roles.
           </p>
         </motion.div>
 

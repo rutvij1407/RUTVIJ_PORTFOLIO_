@@ -87,7 +87,7 @@ export default function Contact() {
             Get In <span className="text-[#dc2626]">Touch</span>
           </h2>
           <p className="text-[#9ca3af] max-w-2xl mx-auto">
-            Actively seeking Summer 2026 internship opportunities in Data Analytics and Data Engineering. Open to discussing projects, collaborations, or full-time roles—reach out via email, LinkedIn, or the form below.
+            Open to data analytics and data engineering roles, internships and collaborations. Reach out via email, LinkedIn, or the form below.
           </p>
         </motion.div>
 
@@ -176,7 +176,7 @@ export default function Contact() {
               </button>
             </form>
             <p className="text-[#6b7280] text-sm mt-2">
-              Available for Summer 2026 Internships
+              Open to data analytics and engineering roles
             </p>
           </motion.div>
         </div>

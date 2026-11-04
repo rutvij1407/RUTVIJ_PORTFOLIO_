@@ -1,60 +1,40 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { AnimatePresence } from 'framer-motion'
-import LoadingScreen from '@/components/ui/LoadingScreen'
-import TopMenuBar from '@/components/layout/TopMenuBar'
-import SidebarNav from '@/components/layout/SidebarNav'
-import NavXian from '@/components/layout/NavXian'
-import Hero from '@/components/sections/Hero'
-import About from '@/components/sections/About'
-import Experience from '@/components/sections/Experience'
-import Featured from '@/components/sections/Featured'
-import Projects from '@/components/sections/Projects'
-import KeyDifferentiators from '@/components/sections/KeyDifferentiators'
-import Skills from '@/components/sections/Skills'
-import Education from '@/components/sections/Education'
-import Certifications from '@/components/sections/Certifications'
-import Contact from '@/components/sections/Contact'
-import Footer from '@/components/layout/Footer'
-import ScrollUp from '@/components/ui/ScrollUp'
+import TopMenuBar from '@/components/TopMenuBar'
+import SidebarNav from '@/components/SidebarNav'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
+import NumbersBand from '@/components/NumbersBand'
+import Dashboard from '@/components/Dashboard'
+import Experience from '@/components/Experience'
+import Projects from '@/components/Projects'
+import Skills from '@/components/Skills'
+import Education from '@/components/Education'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
+import SiteBackground from '@/components/SiteBackground'
+import { ScrollProgress, CursorGlow } from '@/components/Effects'
+import AgentBuild from '@/components/AgentBuild'
 
 export default function Page() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
-    <>
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <LoadingScreen key="loader" />
-        ) : (
-          <main key="content" className="pb-24 md:pb-0 md:pr-24 md:pl-4">
-            <TopMenuBar />
-            <SidebarNav />
-            <NavXian />
-            <Hero />
-            <About />
-            <Experience />
-            <KeyDifferentiators />
-            <Featured />
-            <Projects />
-            <Skills />
-            <Education />
-            <Certifications />
-            <Contact />
-            <Footer />
-            <ScrollUp />
-          </main>
-        )}
-      </AnimatePresence>
-    </>
+    <main className="grain relative">
+      <SiteBackground />
+      <ScrollProgress />
+      <CursorGlow />
+      <TopMenuBar />
+      <SidebarNav />
+      <Hero />
+      <About />
+      <NumbersBand />
+      <Dashboard />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Education />
+      <Contact />
+      <Footer />
+      <AgentBuild />
+    </main>
   )
 }

@@ -1,28 +1,24 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Inter, Space_Grotesk, JetBrains_Mono } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const display = Space_Grotesk({ subsets: ['latin'], variable: '--font-display' })
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
   title: 'Rutvij Reddy Vakati | Data Analytics Engineer',
-  description: 'Portfolio of Rutvij Reddy Vakati - Data Analytics Engineer, MS Data Analytics @ GMU, transforming raw data into actionable insights',
-  keywords: 'Data Analytics, Data Engineering, Power BI, Python, SQL, AWS, Portfolio',
-  icons: {
-    icon: '/assets/img/RV.svg',
-  },
+  description:
+    'Portfolio of Rutvij Reddy Vakati: Data Analytics Engineer, MS Data Analytics Engineering at GMU. ETL pipelines, Power BI, Tableau, AWS and AI-powered analytics.',
+  keywords: 'Data Analytics, Data Engineering, Power BI, Tableau, Python, SQL, AWS, ETL, Portfolio',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const viewport: Viewport = { themeColor: '#000000' }
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-[#000000] text-[#f5f5f7] antialiased`}>
-        {children}
-      </body>
+    <html lang="en" className={`dark ${inter.variable} ${display.variable} ${mono.variable}`}>
+      <body className="bg-ink font-sans text-cream antialiased">{children}</body>
     </html>
   )
 }

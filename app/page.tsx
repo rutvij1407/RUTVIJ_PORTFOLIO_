@@ -9,6 +9,7 @@ import NavXian from '@/components/layout/NavXian'
 import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Experience from '@/components/sections/Experience'
+import Featured from '@/components/sections/Featured'
 import Projects from '@/components/sections/Projects'
 import KeyDifferentiators from '@/components/sections/KeyDifferentiators'
 import Skills from '@/components/sections/Skills'
@@ -43,6 +44,7 @@ export default function Page() {
             <About />
             <Experience />
             <KeyDifferentiators />
+            <Featured />
             <Projects />
             <Skills />
             <Education />

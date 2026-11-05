@@ -193,7 +193,7 @@ export const projects: Project[] = [
     blurb: 'Kafka and PySpark streaming pipeline that tracks CTR and spend per campaign, minute by minute.',
     points: [
       'Built a real-time ad analytics pipeline: a Kafka event stream processed by PySpark Structured Streaming into per-minute campaign metrics (impressions, clicks, CTR, spend) stored as Parquet.',
-      'Handled messy data by design: broken records are quarantined, duplicates removed on event ID, and a 5-minute watermark absorbs late events. Measured CTR landed within about 0.2 points of each campaign\'s true rate on a 150K-event test run.',
+      'Handled messy data by design: broken records are quarantined, duplicates removed on event ID, and a 5-minute watermark absorbs late events. Measured CTR landed within about 0.3 points of each campaign\'s true rate on a 150K-event test run.',
       'Added a Scala Spark job for the daily campaign report (CTR, cost per click, best minute, CTR rank), a live Streamlit dashboard, and unit tests on the transform logic.',
     ],
     tech: ['Kafka', 'PySpark', 'Scala', 'Parquet', 'Streamlit', 'Docker'],

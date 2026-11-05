@@ -189,7 +189,7 @@ export const projects: Project[] = [
     title: 'AdPulse',
     kind: 'Real-time ad click analytics',
     category: 'Data & ML',
-    github: GH,
+    github: 'https://github.com/rutvij1407/adpulse',
     blurb: 'Kafka and PySpark streaming pipeline that tracks CTR and spend per campaign, minute by minute.',
     points: [
       'Built a real-time ad analytics pipeline: a Kafka event stream processed by PySpark Structured Streaming into per-minute campaign metrics (impressions, clicks, CTR, spend) stored as Parquet.',

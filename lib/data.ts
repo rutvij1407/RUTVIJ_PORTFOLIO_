@@ -186,6 +186,20 @@ export const projects: Project[] = [
     tech: ['Swift', 'SwiftUI', 'Mapbox', 'Next.js', 'Cesium.js'],
   },
   {
+    title: 'AdPulse',
+    kind: 'Real-time ad click analytics',
+    category: 'Data & ML',
+    github: GH,
+    blurb: 'Kafka and PySpark streaming pipeline that tracks CTR and spend per campaign, minute by minute.',
+    points: [
+      'Built a real-time ad analytics pipeline: a Kafka event stream processed by PySpark Structured Streaming into per-minute campaign metrics (impressions, clicks, CTR, spend) stored as Parquet.',
+      'Handled messy data by design: broken records are quarantined, duplicates removed on event ID, and a 5-minute watermark absorbs late events. Measured CTR landed within about 0.2 points of each campaign\'s true rate on a 150K-event test run.',
+      'Added a Scala Spark job for the daily campaign report (CTR, cost per click, best minute, CTR rank), a live Streamlit dashboard, and unit tests on the transform logic.',
+    ],
+    tech: ['Kafka', 'PySpark', 'Scala', 'Parquet', 'Streamlit', 'Docker'],
+    stat: { v: '150K', l: 'events per test run' },
+  },
+  {
     title: 'IBM HR Attrition Analysis',
     kind: 'STAT 515 final project',
     category: 'Data & ML',
@@ -208,13 +222,13 @@ export const skills = [
   { group: 'Databases', items: ['MySQL', 'PostgreSQL', 'AWS RDS', 'SQL Server (SSMS)', 'Supabase', 'MongoDB', 'NoSQL'] },
   { group: 'Visualization', items: ['Power BI', 'Tableau', 'Plotly', 'Streamlit', 'Quarto', 'Excel (Pivot, Power Query, DAX)'] },
   { group: 'Cloud & DevOps', items: ['AWS EC2', 'AWS RDS', 'S3', 'Glue', 'Lambda', 'Vercel', 'Docker', 'Linux', 'Git', 'GitHub Actions'] },
-  { group: 'Data Engineering', items: ['ETL / ELT Pipelines', 'Apache Spark', 'Hadoop', 'Airflow', 'Data Modeling', 'NLP (VADER, TextBlob)'] },
+  { group: 'Data Engineering', items: ['ETL / ELT Pipelines', 'Apache Spark', 'Kafka', 'Spark Streaming', 'Scala', 'Hadoop', 'Airflow', 'Data Modeling', 'NLP (VADER, TextBlob)'] },
   { group: 'Methods', items: ['Machine Learning', 'Statistical Analysis', 'A/B Testing', 'Agile (Scrum)', 'SDLC'] },
 ]
 
 export const marquee = [
   'Python', 'SQL', 'R', 'Power BI', 'Tableau', 'AWS', 'Next.js', 'TypeScript', 'Claude API',
-  'Spark', 'Airflow', 'Docker', 'Supabase', 'Plotly', 'Scikit-learn', 'Swift', 'Mapbox',
+  'Spark', 'Kafka', 'Scala', 'Airflow', 'Docker', 'Supabase', 'Plotly', 'Scikit-learn', 'Swift', 'Mapbox',
 ]
 
 export const education = [

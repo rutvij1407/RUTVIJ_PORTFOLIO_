@@ -4,16 +4,13 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, Framer
 
 ## Features
 
-- Animated loading screen with "RUTVIJ" in blue
-- Blue & pitch black theme
-- Scroll-triggered sidebar navigation (pops out when scrolling)
-- Featured projects with GitHub/Output links
-- Work experience carousel (Archents, Pullulate, NSIC)
-- Technical skills from resume
-- Education & certifications
-- Contact form with LinkedIn, GitHub, Email, Phone
+- Intro animation: the RUTVIJ wordmark, then a swarm of cursors "builds" the page while it auto scrolls (skip with `?nointro`; respects reduced motion)
+- Hero with a 3D scene, About with a glass portrait, and a scroll driven numbers band
+- Analytics lab section that presents career impact, projects by domain and tools per role as live charts
+- Experience timeline, featured projects with GitHub and live links, skills, education and certifications
+- Top menu bar plus a sidebar nav that appears on scroll, scroll progress bar and cursor glow
+- Contact section and resume PDF download
 - Fully responsive (mobile, tablet, desktop)
-- Resume PDF download
 
 ## Tech Stack
 
@@ -60,60 +57,14 @@ vercel
 vercel --prod
 ```
 
-## Push to Existing GitHub Repo
-
-```bash
-cd /Users/vakatirutvijreddy/Projects/rutvij-portfolio
-
-# Initialize git (if not already)
-git init
-
-# Add remote (your existing repo)
-git remote add origin https://github.com/rutvij1407/RUTVIJ_PORTFOLIO_.git
-
-# Add all files
-git add .
-
-# Commit
-git commit -m "Updated portfolio with resume data, projects, experience, skills"
-
-# Push to main
-git branch -M main
-git push -u origin main
-```
-
-If the repo already has content and you want to overwrite:
-
-```bash
-git push -u origin main --force
-```
-
 ## Project Structure
 
 ```
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx
-│   └── page.tsx
-├── components/
-│   ├── About.tsx
-│   ├── Contact.tsx
-│   ├── Education.tsx
-│   ├── Experience.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── LoadingScreen.tsx
-│   ├── NavXian.tsx
-│   ├── Projects.tsx
-│   ├── SidebarNav.tsx
-│   ├── Skills.tsx
-│   ├── TopMenuBar.tsx
-│   └── ScrollUp.tsx
-├── public/
-│   └── assets/
-│       ├── img/
-│       └── pdf/
-│           └── Rutvij_Resume.pdf
+├── app/               layout, page and global styles
+├── components/        one file per section (Hero, About, Dashboard, Experience,
+│                      Projects, Skills, Education, Contact, Footer), navigation,
+│                      AgentBuild intro, effects and chart helpers
+├── public/assets/     images and Rutvij_Resume.pdf
 └── package.json
 ```
 
@@ -127,4 +78,4 @@ git push -u origin main --force
 
 ---
 
-© 2025 Vakati Rutvij Reddy. All rights reserved.
+© 2026 Rutvij Reddy Vakati. All rights reserved.

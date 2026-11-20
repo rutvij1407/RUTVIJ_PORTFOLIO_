@@ -22,7 +22,7 @@ export const stats = [
   { value: 99, suffix: '%', label: 'Data accuracy', note: '10K+ daily records' },
   { value: 50, suffix: 'K+', label: 'Records analyzed', note: 'SQL, SSMS, Power BI' },
   { value: 40, suffix: '%', label: 'Faster queries', note: 'indexing & tuning' },
-  { value: 9, suffix: '', label: 'Shipped projects', note: 'web, ML, AI, native' },
+  { value: 11, suffix: '', label: 'Shipped projects', note: 'web, ML, AI, native' },
 ]
 
 export const experience = [
@@ -94,6 +94,34 @@ export type Project = {
 const GH = 'https://github.com/rutvij1407'
 
 export const projects: Project[] = [
+  {
+    title: 'Semiconductor Demand Forecast',
+    kind: 'Time series forecasting and simulation',
+    category: 'Data & ML',
+    github: GH + '/semiconductor-demand-forecast',
+    blurb: 'SARIMA and Prophet backtested against simple baselines, then a Monte Carlo inventory simulation.',
+    points: [
+      'Forecast monthly US semiconductor output 12 months ahead with SARIMA and Prophet and tested both over 10 rolling backtests: average error 4.10% for SARIMA, 4.13% for Prophet, 4.33% for repeating last month and 7.26% for repeating the same month last year.',
+      'Reported the weak result plainly: both models beat the seasonal baseline by about 43% but beat the stronger baseline by only about 5%.',
+      'Simulated 10,000 years per inventory policy using the real forecast errors; the cheapest policy that kept service at 95% or higher reached 96.4% for about 354,000 a year in assumed costs. The data is a public production index, not company sales.',
+    ],
+    tech: ['Python', 'statsmodels', 'Prophet', 'Monte Carlo', 'pandas'],
+    stat: { v: '4.10%', l: 'SARIMA average error' },
+  },
+  {
+    title: 'DataSense Document Q&A',
+    kind: 'Retrieval augmented generation',
+    category: 'AI',
+    github: GH + '/Data_Sense_AI_Chatbot',
+    blurb: 'Ask questions about documents, get answers with the source passages, measured on a test set.',
+    points: [
+      'Added a page to DataSense that answers from text and markdown files, shows the passages behind each answer, and declines when nothing relevant is found. It runs free and offline with local embeddings and a small open model, and supports Claude when a key is set.',
+      'Hybrid retrieval of keyword search and embeddings put the right section in the top 3 for 83% of 30 test questions, against 77% for keyword search alone.',
+      'A local Qwen2.5 1.5B model answered 83% correctly against 53% for a plain extractive fallback, graded by strict keyword match on a small hand written test set about one project. Claude mode is not measured yet.',
+    ],
+    tech: ['Python', 'fastembed', 'BM25', 'llama.cpp', 'Streamlit'],
+    stat: { v: '83%', l: 'answers correct (local model)' },
+  },
   {
     title: 'TalentScope',
     kind: 'Job market intelligence',
